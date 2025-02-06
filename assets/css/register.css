@@ -1,0 +1,172 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #333;
+    background-color: #F4F4F4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    margin: 0;
+    color: #444;
+}
+
+a {
+    text-decoration: none;
+    color: #0303AB; /* Deep Blue */
+}
+
+/* Header */
+header {
+    background-color: #CA09E8; /* Magenta */
+    color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    font-size: 16px;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+.registration-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Registration Form */
+.registration-form {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.registration-form h2 {
+    text-align: center;
+    color: #CA09E8; /* Magenta */
+    margin-bottom: 20px;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.registration-form input:focus {
+    border-color: #CA09E8; /* Magenta */
+    outline: none;
+    box-shadow: 0 0 5px rgba(202, 9, 232, 0.5);
+}
+
+.registration-form .register-btn {
+    background-color: #0303AB; /* Deep Blue */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.registration-form .register-btn:hover {
+    background-color: #FFD700; /* Yellow */
+    color: #333;
+}
+
+/* Total Pets Registered */
+.total-registered {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.total-registered h2 {
+    color: #CA09E8; /* Magenta */
+    margin-bottom: 10px;
+}
+
+.total-registered .count-display {
+    font-size: 48px;
+    color: #0303AB; /* Deep Blue */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #0303AB; /* Deep Blue */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    color: #FFD700; /* Yellow */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .registration-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .registration-form, .total-registered {
+        width: 90%;
+    }
+}
