@@ -4,16 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Salon</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="assets/css/landing.css">
 </head>
 <body>
-    <h1>Welcome to the Pet Salon</h1>
-    
-    <div id="pets-count">Total Pets: 0</div>
-    
-    <h2>Registered Pets</h2>
-    <ul id="pet-list"></ul>
+    <!-- Header -->
+    <header>
+        <div class="logo">Groomi</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Book Now</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <input type="text" placeholder="Search...">
+    </header>
 
-    <script src="assets/js/script.js"></script>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Pamper your pet with our services</h1>
+        <button>Explore</button>
+    </section>
+
+    <!-- Search Filters -->
+    <section class="filters">
+        <select>
+            <option>Location</option>
+        </select>
+        <select>
+            <option>Select Date</option>
+        </select>
+        <select>
+            <option>Number of Pets</option>
+        </select>
+        <button>Search</button>
+    </section>
+
+    <!-- Pet Categories -->
+    <section class="categories">
+        <h2>Pet Categories</h2>
+        <div class="category-grid">
+            <div>Dog Grooming</div>
+            <div>Cat Grooming</div>
+            <div>Bird Grooming</div>
+            <div>Exotic Pets</div>
+            <div>Small Pets</div>
+            <div>Other Pets</div>
+        </div>
+    </section>
+
+    <!-- Promotional Section -->
+    <section class="promo">
+        <h2>Pamper Your Pet</h2>
+        <p>1 session from $50/pet</p>
+        <button>Explore Now</button>
+    </section>
+
+    <!-- Featured Deals -->
+    <section class="deals">
+        <h2>Best deals this week</h2>
+        <div class="deal-grid">
+            <div>Dampered Pups</div>
+            <div>Feline Friends</div>
+            <div>Feathered Beauties</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Groomi. All rights reserved.</p>
+    </footer>
+
+    <!-- Connect the JavaScript file -->
+    <script src="assets/js/landing.js"></script>
 </body>
 </html>

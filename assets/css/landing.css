@@ -1,0 +1,207 @@
+/* ========== Base Styles ========== */
+/* Global styles for the entire webpage */
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Set the primary font family */
+    color: #333; /* Default text color */
+    background-color: #FCFCFC; /* Light background color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    line-height: 1.6; /* Improve text readability by increasing line height */
+}
+
+/* ========== Theme Variables ========== */
+/* Custom CSS variables to define theme colors for easy reusability */
+:root {
+    --primary-color: #CA09E8; /* Magenta: Main color for buttons and header */
+    --secondary-color: #0303AB; /* Deep Royal Blue: Used for borders and highlights */
+    --accent-color: #FFD700; /* Yellow: Used for buttons or accents */
+    --background-color: #FCFCFC; /* Light Background: For the body and sections */
+    --text-color: #000000; /* Black: Default text color */
+    --light-gray: #F4F4F4; /* Light Gray: Used for section backgrounds */
+}
+
+/* ========== Reset Styles ========== */
+/* Reset default browser styles for a consistent design */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0; /* Remove default margin on headings */
+    padding: 0; /* Remove default padding on headings */
+}
+ul {
+    list-style: none; /* Remove bullets from lists */
+    padding: 0; /* Remove default padding from lists */
+    margin: 0; /* Remove default margin from lists */
+}
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Make links inherit the color from their parent element */
+}
+
+/* ========== Header Styles ========== */
+/* Styles for the website's header */
+header {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Space out logo and navigation items */
+    align-items: center; /* Center items vertically */
+    padding: 15px 30px; /* Add spacing inside the header */
+    background-color: var(--primary-color); /* Set the header background color */
+    color: #fff; /* Set text color to white */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    position: sticky; /* Make the header stick to the top when scrolling */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure the header stays above other elements */
+}
+
+header .logo {
+    font-size: 24px; /* Set logo text size */
+    font-weight: bold; /* Make logo text bold */
+}
+
+header nav ul {
+    display: flex; /* Arrange navigation items in a row */
+    gap: 20px; /* Add space between navigation links */
+}
+
+header nav ul li {
+    font-size: 16px; /* Set font size for navigation links */
+    font-weight: 500; /* Use medium font weight for better readability */
+}
+
+header input[type="text"] {
+    padding: 8px 12px; /* Add padding inside the search box */
+    border: 1px solid var(--secondary-color); /* Add a blue border */
+    border-radius: 5px; /* Round the corners */
+    outline: none; /* Remove default outline on focus */
+    font-size: 14px; /* Set font size inside the input */
+}
+
+/* ========== Hero Section Styles ========== */
+/* Styles for the hero/banner section */
+.hero {
+    text-align: center; /* Center-align text and elements */
+    padding: 60px 20px; /* Add spacing inside the section */
+    background: url('/path-to-hero-image.jpg') no-repeat center center/cover; /* Add a background image */
+    color: #fff; /* Set text color to white for contrast */
+    height: 300px; /* Set a fixed height for the hero section */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center elements vertically */
+    align-items: center; /* Center elements horizontally */
+}
+
+.hero h1 {
+    font-size: 36px; /* Set font size for the heading */
+    margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.hero button {
+    background-color: var(--accent-color); /* Set button background color to yellow */
+    color: #000; /* Set button text color to black */
+    border: none; /* Remove border */
+    padding: 12px 20px; /* Add padding inside the button */
+    font-size: 16px; /* Set button text size */
+    font-weight: bold; /* Make button text bold */
+    border-radius: 5px; /* Round the corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.3s ease; /* Smooth animation for hover effects */
+}
+
+.hero button:hover {
+    background-color: var(--secondary-color); /* Change background color on hover */
+    color: #fff; /* Change text color to white on hover */
+}
+
+/* ========== Filters Section Styles ========== */
+/* Styles for the filters/search bar */
+.filters {
+    display: flex; /* Use flexbox to arrange elements in a row */
+    justify-content: center; /* Center-align the filters */
+    gap: 10px; /* Add spacing between filter elements */
+    margin: 20px 0; /* Add vertical margin */
+}
+
+.filters select,
+.filters button {
+    padding: 10px; /* Add padding for better click area */
+    font-size: 14px; /* Set font size for dropdowns and button */
+    border-radius: 5px; /* Round the corners */
+    border: 1px solid var(--secondary-color); /* Add a blue border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* ========== Categories Section Styles ========== */
+/* Styles for the pet categories grid */
+.categories {
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Add padding inside the section */
+    background-color: var(--light-gray); /* Set light gray background */
+}
+
+.categories h2 {
+    font-size: 28px; /* Set font size for the heading */
+    margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.category-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Create three equal columns */
+    gap: 15px; /* Add spacing between grid items */
+}
+
+.category-grid div {
+    background-color: #fff; /* Set white background for grid items */
+    padding: 20px; /* Add padding inside each grid item */
+    border-radius: 8px; /* Round the corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation for hover effects */
+}
+
+.category-grid div:hover {
+    transform: translateY(-5px); /* Move the item upward slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* ========== Promotional Section Styles ========== */
+/* Styles for the promotional banner */
+.promo {
+    text-align: center; /* Center-align text */
+    padding: 40px 20px; /* Add spacing inside the section */
+    background-color: var(--secondary-color); /* Set background to deep blue */
+    color: #fff; /* Set text color to white */
+}
+
+.promo h2 {
+    font-size: 32px; /* Set font size for the heading */
+    margin-bottom: 10px; /* Add spacing below the heading */
+}
+
+.promo p {
+    font-size: 18px; /* Set font size for paragraph text */
+    margin-bottom: 20px; /* Add spacing below the paragraph */
+}
+
+.promo button {
+    background-color: var(--accent-color); /* Set button background color to yellow */
+    color: #000; /* Set button text color to black */
+    border: none; /* Remove border */
+    padding: 12px 20px; /* Add padding inside the button */
+    font-size: 16px; /* Set button text size */
+    font-weight: bold; /* Make button text bold */
+    border-radius: 5px; /* Round the corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.3s ease; /* Smooth animation for hover effects */
+}
+
+.promo button:hover {
+    background-color: var(--light-gray); /* Change background color to light gray on hover */
+    color: var(--secondary-color); /* Change text color to blue on hover */
+}
+
+/* ========== Footer Styles ========== */
+/* Styles for the footer section */
+footer {
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Add spacing inside the footer */
+    background-color: var(--primary-color); /* Set footer background color to magenta */
+    color: #fff; /* Set text color to white */
+    font-size: 14px; /* Set font size for footer text */
+}
